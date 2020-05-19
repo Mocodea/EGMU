@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGMU", "EGMU\EGMU.csproj", "{86B33677-7391-4187-A896-B5738CFFBA03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86B33677-7391-4187-A896-B5738CFFBA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B33677-7391-4187-A896-B5738CFFBA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B33677-7391-4187-A896-B5738CFFBA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B33677-7391-4187-A896-B5738CFFBA03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED9B7F00-F507-47C6-9865-107097C186D8}
+	EndGlobalSection
+EndGlobal
