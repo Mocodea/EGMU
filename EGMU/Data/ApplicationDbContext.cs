@@ -8,9 +8,14 @@ namespace EGMU.Data
 {
     public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
     {
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Savegame> Savegames { get; set; }
+        public DbSet<Scoreboard> Scoreboards { get; set; }
+        public DbSet<Score> Scores { get; set; }
+
         public ApplicationDbContext(
-            DbContextOptions options,
-            IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
+    DbContextOptions options,
+    IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
     }

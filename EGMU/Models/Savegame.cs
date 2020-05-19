@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EGMU.Models
 {
-    class Savegame : BaseEntity
+    public class Savegame : BaseEntity
     {
         [Required]
         public string JSON { get; set; }

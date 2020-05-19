@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace EGMU.Models
 {
-    class BaseEntity
+    public class BaseEntity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public Guid Id { get; set; }
-
-        public DateTime UpdatedAt { get; set; }
-        public DateTime DeletedAt { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
+        public DateTimeOffset DeletedAt { get; set; }
     }
 }
