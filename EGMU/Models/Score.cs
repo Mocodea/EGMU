@@ -11,11 +11,8 @@ namespace EGMU.Models
         public string Playername { get; set; }
         [Required]
         public long Value { get; set; }
-
         public DateTimeOffset Date { get; set; }
-
         public string Meta { get; set; }
-
         public Guid ScoreboardId { get; set; }
 
         public Scoreboard Scoreboard { get; set; }

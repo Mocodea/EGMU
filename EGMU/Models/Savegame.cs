@@ -9,5 +9,8 @@ namespace EGMU.Models
     {
         [Required]
         public string JSON { get; set; }
+        public Guid GameId { get; set; }
+
+        public Game Game { get; set; }
     }
 }

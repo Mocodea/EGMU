@@ -13,7 +13,7 @@ namespace EGMU.Models
         public string LogoPath { get; set; }
         public string APIKey { get; set; }
 
-        public ICollection<Scoreboard> Scoreboard { get; set; }
-        public ICollection<Savegame> Savegame { get; set; }
+        public ICollection<Scoreboard> Scoreboards { get; set; }
+        public ICollection<Savegame> Savegames { get; set; }
     }
 }
