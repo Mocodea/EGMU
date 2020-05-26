@@ -1,4 +1,4 @@
-name: .NET Core
+name: Publish App
 
 on:
   push:
@@ -8,15 +8,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 3.1.300
     - name: Setup Node.js environment
       uses: actions/setup-node@v1.4.2
       with:
