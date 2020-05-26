@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -23,3 +23,7 @@ jobs:
       run: dotnet restore
     - name: Publish
       run: dotnet publish EGMU --configuration Release --no-restore
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: '**/*'
