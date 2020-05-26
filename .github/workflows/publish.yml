@@ -20,14 +20,14 @@ jobs:
       with:
         node-version: '12'
     - name: Install dependencies
-      run: dotnet restore
+      run:  dotnet restore
     - name: Publish
-      run: dotnet publish EGMU --configuration Release --no-restore
+      run:  dotnet publish EGMU --configuration Release --no-restore
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.1
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltDzvO --delete"
+          ARGS: "-rltDzvO --delete  --exclude=appsettings.Production.json"
           SOURCE: "EGMU/bin/Release/netcoreapp3.1/publish/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
