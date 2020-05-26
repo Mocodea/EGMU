@@ -27,8 +27,8 @@ jobs:
       uses: thedoctor0/zip-release@master
       with:
         filename: 'release.zip'
-        path: 'EGMU/bin/Release/netcoreapp3.1/publish'
+        directory: 'EGMU/bin/Release/netcoreapp3.1/publish'
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
-        path: 'release.zip'
+        path: 'EGMU/bin/Release/netcoreapp3.1/publish/release.zip'
