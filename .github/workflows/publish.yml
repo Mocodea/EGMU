@@ -23,7 +23,12 @@ jobs:
       run: dotnet restore
     - name: Publish
       run: dotnet publish EGMU --configuration Release --no-restore
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: 'release.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
-        path: '**/*'
+        path: 'release.zip'
