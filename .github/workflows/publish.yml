@@ -23,20 +23,11 @@ jobs:
       run: dotnet restore
     - name: Publish
       run: dotnet publish EGMU --configuration Release --no-restore
-    - name: Archive Release
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'release.zip'
-        directory: 'EGMU/bin/Release/netcoreapp3.1/publish'
-#    - name: Upload a Build Artifact
-#      uses: actions/upload-artifact@v2
-#      with:
-#        path: 'EGMU/bin/Release/netcoreapp3.1/publish/release.zip'
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.1
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltDzvO --delete"
+          ARGS: "-rltDzvO --delete --exclude=appsettings.Production.json"
           SOURCE: "EGMU/bin/Release/netcoreapp3.1/publish/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
