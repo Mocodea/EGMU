@@ -45,4 +45,4 @@ jobs:
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        script: 'sudo systemctl start egmu'
+        script: ${{ secrets.RESTART_SERVICE }}
