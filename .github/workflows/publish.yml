@@ -23,13 +23,6 @@ jobs:
       run:  dotnet restore
     - name: Publish
       run:  dotnet publish EGMU --configuration Release --no-restore
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        script: 'sudo systemctl stop egmu'
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.1
       env:
