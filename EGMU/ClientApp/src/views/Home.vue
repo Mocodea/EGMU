@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="EGMU Test 123" />
+    <HelloWorld msg="EGMU App Test Github Deploy" />
   </div>
 </template>
 
