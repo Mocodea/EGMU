@@ -1,9 +1,9 @@
 export const oidcSettings = {
-  authority: 'https://egmu.mocodea.com',
+  authority: process.env.VUE_APP_OIDC_AUTHORITY,
   client_id: 'EGMU',
-  redirect_uri: 'https://egmu.mocodea.com/authentication/login-callback',
+  redirect_uri: process.env.VUE_APP_OIDC_REDIRECT_URI,
   response_type: 'code',
   scope: 'EGMUAPI openid profile',
-  silentRedirectUri: 'https://egmu.mocodea.com/authentication/silent-signin',
+  silentRedirectUri: process.env.VUE_APP_OIDC_SILENT_REDIRECT_URI,
   automaticSilentRenew: true, // If true oidc-client will try to renew your token when it is about to expire
 };
